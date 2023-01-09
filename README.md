@@ -5,6 +5,8 @@ Uma bot do Discord na versão 14 da API do Discord.js
 (APENAS UM TEMPLATE);
 
 
+
+
 "dependencies": {
 
   "@discordjs/builders": "^1.4.0",
