@@ -1,0 +1,11 @@
+{
+    "prefix": "PREFIX",
+    "token": "TOKEN_DO_BOT",
+    
+    "botID": "ID_DO_BOT",
+    "serverID": "ID_DO_SERVER_CASO_SEJA_COMANDOS_LOCAIS", 
+
+    "staff": [
+        "SUA_STAFF"
+    ]
+}
