@@ -1,11 +1,8 @@
 # Ursa_bot-V14
 
-Uma bot do Discord na versão 14 da API do Discord.js
+A Discord bot on version 14 of the Discord.js API
 
-(APENAS UM TEMPLATE);
-
-
-
+(JUST A TEMPLATE);
 
 "dependencies": {
 
