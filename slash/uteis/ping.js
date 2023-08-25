@@ -1,12 +1,12 @@
 const { EmbedBuilder } = require('discord.js');
 module.exports = {
     name: "ping",
-    description: "🧠 | Ver velocidade do bot",
+    description: "🧠 | See the bots ping",
     timeout: 5000,
     run: async(interaction, client) => {
 
         //Emoji
-        const ms = client.emojis.cache.find(emoji => emoji.name === "ping~1");
+        const ms = client.emojis.cache.find(emoji => emoji.name === "ping~1"); //If you have an emoji, just put your name here
 
         await interaction.reply('🏓 Pong!')
 

@@ -3,23 +3,24 @@ const Discord = require('discord.js');
 module.exports = {
     name: "clear",
     permissions: "MANAGE_MESSAGES",
-    description: "Apagar mensagens do chat",
+    description: "clear messages in channel",
     options: [
         {
-            name: "quantidade_de_mensagens",
-            description: "Quantidade de mensagens para apagar",
+            name: "number_of_messages",
+            description: "Number of messages to delete",
             type: 4,
             required: true
         }
     ],
     timeout: 5000,
     run: async(interaction, client) => {
-        let deleteAmount = interaction.options.getInteger('quantidade_de_mensagens');
+        let deleteAmount = interaction.options.getInteger('number_of_messages');
 
         if (deleteAmount > 100) {
             deleteAmount = 100
         }
         await interaction.channel.bulkDelete(+deleteAmount, true);
-        interaction.reply({ content: `:tada: | ${interaction.user}, Deletei **${deleteAmount}** mensagens!` })
+        
+        return interaction.reply({ content: `:tada: | ${interaction.user}, Deleted **${deleteAmount}** messages!` })
     }
 }

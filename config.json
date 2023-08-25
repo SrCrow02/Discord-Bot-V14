@@ -1,6 +1,6 @@
 {
     "prefix": "PREFIX",
-    "token": "BOT_TOKEN",
+    "token": "BOT_PREFIX",
     
     "botID": "ID_BOT",
     "serverID": "ID_SERVER", 

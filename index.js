@@ -8,10 +8,10 @@ const token = config.token;
 client.on('messageCreate', message =>{
 
     const embed_mencao = new Discord.EmbedBuilder()
-    .setTitle("Ursa Bot")
+    .setTitle("Template Bot")
     .setColor("BLUE")
-    .setDescription(`Olá ${message.author} tudo bem? Eu sou uma simples bot em Slash **[/]**, Meu criado se chama **crow_ler** Para ver meus comandos use /help`)
-    .setImage("https://share.creavite.co/39VRSehSa0GyXtYh.gif")
+    .setDescription(`Hello ${message.author} How are you? I'm a simple Discord bot **[/]**, my owner name is **crow_ler** To see my commands type /help`)
+    .setImage("") //gif or photo if you want
   
     if(message.content === `<@${client.user.id}>` || message.content === `<@!${client.user.id}>`){
       return message.channel.send({embeds: [embed_mencao]})
@@ -19,7 +19,6 @@ client.on('messageCreate', message =>{
   })
   
   const { initializeApp } = require("firebase/app") ;
-  
   const firebaseConfig = {
     apiKey: "",
     authDomain: "",
@@ -58,12 +57,12 @@ client.on('messageCreate', message =>{
   
   (async () => {
       try {
-          console.log('Comecei a atualizar os comandos!'.yellow);
+          console.log('Start update commands!'.yellow);
           await rest.put(
               Routes.applicationGuildCommands(config.botID, config.serverID),
               { body: commands },
           );
-          console.log('Atualizei todos os comandos slash!'.green);
+          console.log('Update finished'.green);
       } catch (error) {
           console.error(error);
       }

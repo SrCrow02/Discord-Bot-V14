@@ -16,8 +16,8 @@ module.exports = async (client , message) => {
         if (command.timeout) {
             if (Timeout.has(`${message.author.id}${command.name}`)) {
                 const embed = new MessageEmbed()
-                .setTitle('Você tem que esperar')
-                .setDescription(`:x: Você precisa esperar **${humanizeDuration(command.timeout, { round: true })}** Para usar esse comando novamente!`)
+                .setTitle('You need wait')
+                .setDescription(`:x: You need wait **${humanizeDuration(command.timeout, { round: true })}** to use this command again!`)
                 .setColor('#ff0000')
                 return message.channel.send({ embeds: [embed] })
             } else {

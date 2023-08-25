@@ -12,8 +12,8 @@ module.exports = async(client, interaction) => {
 			if (command.timeout) {
 				if (Timeout.has(`${interaction.user.id}${command.name}`)) {
 					const embed = new EmbedBuilder()
-					.setTitle('Você tem que esperar')
-					.setDescription(`Você precisa esperar **${humanizeDuration(command.timeout, { round: true })}** para usar esse comando novamente!`)
+					.setTitle('You need wait')
+					.setDescription(`You need wait **${humanizeDuration(command.timeout, { round: true })}** to use this command again!`)
 					.setColor('#ff0000')
 					return interaction.reply({ embeds: [embed], ephemeral: true })
 				}
@@ -22,7 +22,7 @@ module.exports = async(client, interaction) => {
 				if (!interaction.member.permissions.has(command.permissions)) {
 					const embed = new EmbedBuilder()
 					.setTitle('Falta permissão')
-					.setDescription(`:x: Você precisa\`${command.permissions}\` para usar esse comando`)
+					.setDescription(`:x: You need\`${command.permissions}\` to use this command!`)
 					.setColor('#ff0000')
 					.setFooter(interaction.user.tag, interaction.user.displayAvatarURL({ dynamic: true }))
 					.setTimestamp()
@@ -31,12 +31,12 @@ module.exports = async(client, interaction) => {
 			}
 			if (command.devs) {
 				if (!config.ownersID.includes(interaction.user.id)) {
-					return interaction.reply({ content: ":x: Apenas DEVS podem usar esse comando", ephemeral: true });
+					return interaction.reply({ content: ":x: just DEVS can use this command", ephemeral: true });
 				}
 			}
 			if (command.ownerOnly) {
 				if (interaction.user.id !== interaction.guild.ownerId) {
-					return interaction.reply({ content: "Apneas ADMs podem usar esse comando", ephemeral: true })
+					return interaction.reply({ content: "just ADMs can use this command", ephemeral: true })
 				}
 			}
 			command.run(interaction, client);
@@ -46,7 +46,7 @@ module.exports = async(client, interaction) => {
 			}, command.timeout);
 		} catch (error) {
 			console.error(error);
-			await interaction.reply({ content: ':x: Ocorreu um erro ao executar este comando!', ephemeral: true });
+			await interaction.reply({ content: ':x: An error occurred while executing this command!', ephemeral: true });
 		}
 	}
 } 
