@@ -10,7 +10,7 @@ client.on('messageCreate', message =>{
     const embed_mencao = new Discord.EmbedBuilder()
     .setTitle("Ursa Bot")
     .setColor("BLUE")
-    .setDescription(`Olá ${message.author} tudo bem? Eu sou uma simples bot em Slash **[/]**, Meu criado se chama **Crowler#5691** Para ver meus comandos use /help`)
+    .setDescription(`Olá ${message.author} tudo bem? Eu sou uma simples bot em Slash **[/]**, Meu criado se chama **crow_ler** Para ver meus comandos use /help`)
     .setImage("https://share.creavite.co/39VRSehSa0GyXtYh.gif")
   
     if(message.content === `<@${client.user.id}>` || message.content === `<@!${client.user.id}>`){
