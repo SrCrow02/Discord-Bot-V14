@@ -46,16 +46,16 @@ A module-based Discord bot template.
 
    ```json
      {
-    "prefix": "PREFIX",
-    "token": "BOT_PREFIX",
-    
-    "botID": "ID_BOT",
-    "serverID": "ID_SERVER", 
+       "prefix": "PREFIX",
+       "token": "BOT_PREFIX",
+       
+       "botID": "ID_BOT",
+       "serverID": "ID_SERVER", 
 
-    "staff": [
-        "YOUR_STAFF"
-    ]
-}
+       "staff": [
+           "YOUR_STAFF"
+       ]
+    }
    ```
 
 3. Lastly, run the following command to start the bot:
