@@ -73,7 +73,7 @@ You're ready to create your own Discord bot! 🎉
 - Remove bots in your server that may conflict in functionality, e.g. multiple reaction role bots.
 - Use [Git Bash](https://git-scm.com/downloads) instead of the Command Prompt (cmd.exe) if you are on Windows.
 - Check that your:
-  - `node` version is `>=16.6.0` by running `node -v`.
+  - `node` version is `=>16.11.0` by running `node -v`.
   - `npm` version is `>=7.0.0` by running `npm -v`.
 - If running the application outputs:
   - `Error: Cannot find module '...'`, try running `npm i` in the project directory.
